@@ -5,6 +5,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "homepage": "https://RealIslamic.github.io/Zeitoon",
   "scripts": {
     "start": "concurrently \"vite --host\" \"npm run start-electron\"",
     "dev": "vite --host",
@@ -17,7 +18,9 @@
     "format": "prettier --write \"src/**/*.tsx\"",
     "preview": "vite preview",
     "test": "vitest --ui",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "build": {
     "appId": "com.bible",
